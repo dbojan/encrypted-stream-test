@@ -1,0 +1,25 @@
+# 1. Encrypt and add Widevine PSSH
+# The --pssh flag format is <SystemID>:<Data>
+# For a basic lab, we can use an empty data field or a generated bin file.
+./mp4encrypt --method MPEG-CENC \
+  --property 1:KID:11111111111111111111111111111111 \
+  --property 2:KID:22222222222222222222222222222222 \
+  --key 1:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:random \
+  --key 2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:random \
+  --pssh edef8ba979d64acea3c827dcdd01d211: \
+  fragmented.mp4 widevine_encrypted.mp4
+
+
+2. generate the Widevine DASH Manifest
+./mp4dash -o widevine_test \
+  --widevine-header "provider:widevine_test#content_id:2a" \
+  widevine_encrypted.mp4
+
+
+3. playlist
+#EXTM3U
+#EXTINF:-1, TEST Widevine 2-Key Split
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+http://192.168.100.50:8000/widevine_dash/stream.mpd

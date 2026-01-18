@@ -1,0 +1,26 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="", Test 1 Key Dash Clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a18b6aa739be4c0b114605fcfb5d6b68:b41c3a6f7511b2e3a828d9580124c89d
+http://192.168.100.50:8000/1key/stream.mpd
+#EXTINF:-1, TEST 2-key Split VidAud
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+http://192.168.100.50:8000/2key/stream.mpd
+#EXTM3U
+#EXTINF:-1, TEST 3-Key Adaptive 720p-480p-Audio
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","33333333333333333333333333333333":"cccccccccccccccccccccccccccccccc"}
+http://192.168.100.50:8000/3key/stream.mpd
+#EXTINF:-1, TEST Widevine Shaka All Tracks Encrypted
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_url=https://cwip-shaka-proxy.appspot.com/no_auth
+http://192.168.100.50:8000/widevine/stream.mpd
+#EXTINF:-1, TEST Widevine as dash
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+http://192.168.100.50:8000/widevine_dash/stream.mpd

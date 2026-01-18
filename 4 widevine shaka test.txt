@@ -1,0 +1,32 @@
+
+
+1.
+./mp4encrypt --method MPEG-CENC \
+  --property 1:KID:30303030303030303030303030303030 \
+  --property 2:KID:30303030303030303030303030303030 \
+  --key 1:30303030303030303030303030303030:random \
+  --key 2:30303030303030303030303030303030:random \
+  --pssh edef8ba979d64acea3c827dcdd01d211: \
+  fragmented.mp4 shaka_encrypted.mp4
+
+
+2.
+./mp4dash --clearkey -o shaka_lab shaka_encrypted.mp4
+
+3.
+
+#EXTINF:-1, TEST Widevine Shaka All Tracks Encrypted
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_url=https://cwip-shaka-proxy.appspot.com/no_auth
+http://192.168.100.50:8000/widevine_shaka/stream.mpd
+
+
+
+
+
+(in case you want to encrypt video only:
+./mp4encrypt --method MPEG-CENC \
+  --property 1:KID:30303030303030303030303030303030 \
+  --key 1:30303030303030303030303030303030:random \
+  --pssh edef8ba979d64acea3c827dcdd01d211: \
+  fragmented.mp4 shaka_encrypted.mp4)

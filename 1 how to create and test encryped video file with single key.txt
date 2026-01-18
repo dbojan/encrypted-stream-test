@@ -1,0 +1,91 @@
+
+v2026-18-1-1
+
+NOTE: if you just want to test m3u file, 
+a) just edit test.m3u file, change local ip address to your pc
+b) cd to this folder, start python http server:
+python -m http.server 8000
+c) add m3u url in android iptv player: http://192.168.100.50/test.m3u
+(use your pc local address instead of one displayed here.
+
+
+widevine tests will probably fail.
+
+For more info see points 3. 4 and 5 below.
+
+How to create encrypted stream for test:
+
+0 extract short segment from a movie, using ffmpeg. I also downsized it to 360p
+I used open blender move 'Spring - Blender Open Movie'
+It might take some time to seek to time.
+
+ffmpeg -i in.mp4 -ss 00:06:45 -t 40 -vf scale=-2:360  -c:a copy -c:v libx264  -v verbose  out.mp4
+
+1. Prepare Your Key
+
+A ClearKey setup requires a Key ID (KID) and a Key. Both are 32-character hex strings (16 bytes).
+KID: a18b6aa739be4c0b114605fcfb5d6b68
+Key: b41c3a6f7511b2e3a828d9580124c89d
+
+2. Fragment the video: First, convert your movie file into a fragmented MP4 that Bento4 can read.
+download bento4 app, unzip, cd to its folder.
+
+I used:
+./mp4fragment 40.mp4 fragmented.mp4
+
+(I did not use: ffmpeg -i movie.mp4 -c copy -f mp4 movie_fragmented.mp4)
+
+2. Encrypt and Dashify: Run the following command. Replace the KID and Key with yours. The format is KID:Key.
+./mp4dash --encryption-key=a18b6aa739be4c0b114605fcfb5d6b68:b41c3a6f7511b2e3a828d9580124c89d out40_fragmented.mp4
+
+(you might have to update linux system lib: expat, if you get error:
+ERROR: /usr/lib/python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so: undefined symbol: XML_SetAllocTrackerActivationThreshold
+)
+
+
+(you can rename stream.mpd to 1key.mpd, and edit text file to add 1keyfolder/ in front of representation. also move audio and video folders to '1keyfolder' folder)
+
+3. Host the Files
+IPTV players usually cannot play DASH manifests directly from a local file path (e.g., C:/movie/index.mpd). You must serve them via HTTP.
+Use Python to start a local server in your output folder:
+(go to 'bento4\output' folder, type)
+
+
+python -m http.server 8000
+
+
+If your local ip is 192.168.100.50, address of your STREAM (NOT m3u playlist) will be: 
+http://192.168.100.50:8000/1key.mpd
+
+
+4. Create the M3U Playlist, 
+
+add licence key, and stream address, so players can decode.
+
+(If you already have single.m3u, then edit it in notepad++, or notepad.)
+
+Ensure the license_key format matches your KID and Key. (a1...
+
+save everything between -- as single.m3u, this will tell players what is they key to be able to decrypt and play video and sound
+replace ip address with your pc local ip address.
+
+Update your test.m3u  file to point to your local server (last part http...)
+Set correct local ip address.
+--
+#EXTM3U
+#EXTINF:-1 tvg-logo="", Test 1 Key Dash Clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a18b6aa739be4c0b114605fcfb5d6b68:b41c3a6f7511b2e3a828d9580124c89d
+http://192.168.100.50:8000/1key.mpd
+--
+
+5. open 'ott navigator', or other android iptv player that can play widevine content, and add this as M3U PLAYLIST address:
+
+http://192.168.100.50/test.m3u
+
+you can open local m3u file on android (copy it there first), or enter its address (it is also being served by python http server)
+
+
+
+

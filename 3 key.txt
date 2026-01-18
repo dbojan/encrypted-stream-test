@@ -1,0 +1,34 @@
+# 1. Create multi-stream MP4
+ffmpeg -i 40.mp4 \
+    -map 0:v -s:v:0 1280x720 -b:v:0 3000k \
+    -map 0:v -s:v:1 854x480  -b:v:1 1500k \
+    -map 0:a -c:a aac -b:a 128k \
+    -f mp4 multi_temp.mp4 -y
+
+# 2. Fragment it
+./mp4fragment multi_temp.mp4 multi_fragmented.mp4
+
+# 3.encrypt
+
+./mp4encrypt --method MPEG-CENC \
+  --property 1:KID:11111111111111111111111111111111 \
+  --property 2:KID:22222222222222222222222222222222 \
+  --property 3:KID:33333333333333333333333333333333 \
+  --key 1:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:random \
+  --key 2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:random \
+  --key 3:cccccccccccccccccccccccccccccccc:random \
+  multi_fragmented.mp4 multi_encrypted.mp4
+
+
+# 4. create stream
+./mp4dash --clearkey -o 3key_test multi_encrypted.mp4
+
+
+# 5. playlist
+
+#EXTM3U
+#EXTINF:-1, [TEST] 3-Key Adaptive (720p/480p/Audio)
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","33333333333333333333333333333333":"cccccccccccccccccccccccccccccccc"}
+http://192.168.100.50:8000/3key/stream.mpd

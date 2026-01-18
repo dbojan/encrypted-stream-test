@@ -1,0 +1,17 @@
+./mp4encrypt --method MPEG-CENC \
+  --property 1:KID:11111111111111111111111111111111 \
+  --property 2:KID:22222222222222222222222222222222 \
+  --key 1:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:random \
+  --key 2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:random \
+  fragmented.mp4 encrypted_fixed.mp4
+
+
+./mp4dash --clearkey -o 2key_final encrypted_fixed.mp4
+
+
+#EXTM3U
+#EXTINF:-1, TEST 2-key Split (Vid/Aud)
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"11111111111111111111111111111111":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","22222222222222222222222222222222":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+http://192.168.100.50:8000/2key/stream.mpd
