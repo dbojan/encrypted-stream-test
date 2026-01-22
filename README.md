@@ -28,4 +28,4 @@ ott navigator can play these files (closed source, no automatic update)
 
 sparkle tv sometimes (closed source, max 3 hours update, current choice)
 
-no desktop pc app.
+no desktop pc app (maybe Kodi).
