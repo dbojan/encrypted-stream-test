@@ -18,6 +18,8 @@ https://github.com/oxyroid/M3UAndroid/issues/371
 
 https://github.com/AndreyPavlenko/Fermata/issues/686
 
+https://code.videolan.org/videolan/vlc/-/issues/29465
+
 also televizo app.
 
 ott navigator can play these files (closed source, no automatic update)
