@@ -16,6 +16,8 @@ https://github.com/4gray/iptvnator/issues/656
 
 https://github.com/oxyroid/M3UAndroid/issues/371
 
+https://github.com/AndreyPavlenko/Fermata/issues/686
+
 also televizo app.
 
 ott navigator can play these files (closed source, no automatic update)
