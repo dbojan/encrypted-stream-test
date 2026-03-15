@@ -8,19 +8,26 @@ https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sha
 
 issues posted:
 
+ANDROID:
+
 https://github.com/brunochanrio/DangoPlayer/issues/24
 
 https://github.com/Fredolx/open-tv/issues/317
-
-https://github.com/4gray/iptvnator/issues/656
 
 https://github.com/oxyroid/M3UAndroid/issues/371
 
 https://github.com/AndreyPavlenko/Fermata/issues/686
 
+PC
+
+https://github.com/4gray/iptvnator/issues/656
+
 https://code.videolan.org/videolan/vlc/-/issues/29465
 
 https://github.com/mpv-player/mpv/issues/17063
+
+
+ANDROID, not open source
 
 also televizo app.
 
