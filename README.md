@@ -1,4 +1,7 @@
 # encrypted-stream-test
+
+#2026-03-15-1
+
 test files for multikeys stream
 
 files are here, because I cannot upload file through browser, if it is bigger than 25MB:
@@ -36,3 +39,9 @@ ott navigator can play these files (closed source, no automatic update)
 sparkle tv sometimes (closed source, max 3 hours update, current choice)
 
 no desktop pc app (maybe Kodi).
+
+
+**ver:**
+
+2026-03-15-1
+- updated docs 
