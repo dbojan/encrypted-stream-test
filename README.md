@@ -19,8 +19,8 @@ todo:
 - make version for pc, using flutter + webkit + shaka
 
 
-**ver:**
-- 2026-03-17-1
+**ver**
+2026-03-17-1
 
 ---
 
@@ -60,8 +60,7 @@ sparkle tv sometimes (closed source, max 3 hours update, current choice)
 no desktop pc app (maybe Kodi).
 
 
-**ver 2026-03-17-1**
-
+**ver**
 2026-03-17-1
 - added text to video
 
