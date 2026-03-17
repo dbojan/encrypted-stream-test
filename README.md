@@ -14,6 +14,8 @@ https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sha
 
 **es_player_source.zip** - source files for es player
 
+tofix: sometimes it takes too long to add playlist. just click cancel, list should be added anyway.
+
 todo:
 - add support for remote
 - make version for pc, using flutter + webkit + shaka
