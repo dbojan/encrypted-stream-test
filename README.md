@@ -20,6 +20,7 @@ todo:
 
 
 **ver**
+
 2026-03-17-1
 
 ---
@@ -61,6 +62,7 @@ no desktop pc app (maybe Kodi).
 
 
 **ver**
+
 2026-03-17-1
 - added text to video
 
