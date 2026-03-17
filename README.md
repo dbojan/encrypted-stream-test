@@ -1,6 +1,6 @@
 # encrypted-stream-test
 
-#2026-03-15-1
+#2026-03-17-1
 
 test files for multikeys stream
 
@@ -42,6 +42,9 @@ no desktop pc app (maybe Kodi).
 
 
 **ver:**
+
+2026-03-17-1
+- added text to video
 
 2026-03-15-1
 - updated docs 
