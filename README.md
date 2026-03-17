@@ -6,11 +6,27 @@ files are on google drive, because I cannot upload file through browser, if it i
 
 https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sharing
 
-**es_player.apk** - open source encrypted stream player for android
-- supports dash clearkey 1 and multiple keys encryption. 
-- written in flutter + mediakit
+**Android**
+
+**ES player** - open source clearkey encrypted dash stream player for android 
+
+Download es_player.apk to install on android
+
+- supports clearkey 1 and multiple keys encrypted dash streams
+- written in flutter, uses mediakit
 - beta version
 - does not support widevine
+
+**how to use**
+- add playlist(s): http://www.something.../play.m3u
+- use left right for prev next channel
+- tap to pause (you will see icon for channel-list and settings on th bottom, and icons for next and prev channel)
+- pull down - show channel-list
+- pull up - show settings screen
+
+on the settings screen:
+- swipe right - go back to play screen
+- pull down - update currently selected list
 
 **es_player_source.zip** - source files for es player
 
