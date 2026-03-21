@@ -45,7 +45,7 @@ todo:
 
 **"encryptionstream_test_server_single_and_multi_keys"** - mini server for testing player apps that can play encrypted streams
 
-#version: 2026-03-17-1
+#version: 2026-03-21-1
 
 issues posted:
 
@@ -80,6 +80,9 @@ no desktop pc app (maybe Kodi).
 
 
 **ver**
+
+2026-03-21-1  
+- added tests for user agent and referrer
 
 2026-03-17-1
 - added text to video
