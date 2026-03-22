@@ -64,6 +64,7 @@ todo:
 - remote support (to test)
 
 2026-03-17-1
+- first version
 
 ---
 
