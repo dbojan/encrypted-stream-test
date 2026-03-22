@@ -1,6 +1,6 @@
 # es player - open source encrypted stream player for android
 
-#version: 2026-03-17-1
+#version: 2026-03-22-1
 
 files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
 
@@ -18,26 +18,50 @@ Download es_player.apk to install on android
 - does not support widevine
 
 **how to use**
-- add playlist(s): http://www.something.../play.m3u
-- use left right for prev next channel
-- tap to pause (you will see icon for channel-list and settings on th bottom, and icons for next and prev channel)
-- pull down - show channel-list
-- pull up - show settings screen
+
+- tap: pause, show playlist, and icons for: prev channel, channels list, settings, next channel
+- up on remote/swipe from up to down: prev channel
+- down on remote/swipe from down to up/dpad down: next channel
+- left on remote/swipe from left to right: show channel list
+- right on remote/swipe from right to left: show settings
 
 on the settings screen:
 - swipe right - go back to play screen
 - pull down - update currently selected list
 
-**es_player_source.zip** - source files for es player
+-you can put URLS to your playlist in Documents/esplayer.txt, so you do not have to type them in manually: 
+Documents/esplayer.txt content: 
+http://mysite1.com/list1.m3u  
+http://mysite2.com/list2.m3u  
 
-tofix: sometimes it takes too long to add playlist. just click cancel, list should be added anyway.
+
+-you can search playlist, and save the result to new playlist
+
+
+-you can put local playlists files in Documents folder, and esplayer will add them. 
+(this is also used for saving search to new playlist)  
+
+local_playlist_example.m3u:  
+#EXTM3U
+#EXTINF:-1,stream 1
+http://website.com/list.m3u
+#EXTINF:-1,stream 2
+http://website2/list.m3u
+
+-you can add playlist(s): http://www.something.../play.m3u from settings screen
+
+-from the channellist you can switch playlists or update them
+-added support for subtitles, more settings.
 
 todo:
-- add support for remote
 - make version for pc, using flutter + webkit + shaka
 
-
 **ver**
+
+2026-03-22-1  
+- added support for subtitles
+- more settings
+- remote support (to test)
 
 2026-03-17-1
 
