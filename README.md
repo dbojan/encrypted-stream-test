@@ -1,6 +1,6 @@
 # es player - open source encrypted stream player for android
 
-#version: 2026-03-22-1
+#version: 2026-03-28-1
 
 files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
 
@@ -57,6 +57,9 @@ todo:
 - make version for pc, using flutter + webkit + shaka
 
 **ver**
+
+2026-03-28-1
+- working on improving androit tv ui.
 
 2026-03-22-1  
 - added support for subtitles
