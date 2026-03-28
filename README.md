@@ -59,7 +59,7 @@ todo:
 **ver**
 
 2026-03-28-1
-- working on improving androit tv ui.
+- working on improving android tv ui.
 
 2026-03-22-1  
 - added support for subtitles
