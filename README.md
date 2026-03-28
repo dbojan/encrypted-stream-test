@@ -2,7 +2,7 @@
 
 #version: 2026-03-28-1
 
-files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
+binary files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
 
 https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sharing
 
