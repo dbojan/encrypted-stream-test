@@ -58,9 +58,6 @@ todo:
 
 **ver**
 
-2026-06-17-1
-https://github.com/glitport/AuthoIPTV/ can actually play ecnrypted channels on pc! Well done!
-
 2026-03-28-1
 - working on improving android tv ui.
 
@@ -73,6 +70,14 @@ https://github.com/glitport/AuthoIPTV/ can actually play ecnrypted channels on p
 - first version
 
 ---
+**news**
+
+2026-06-17-1
+**https://github.com/glitport/AuthoIPTV/ can actually play encrypted channels on pc! Well done!**
+
+<br>
+<br>
+
 
 **"encryptionstream_test_server_single_and_multi_keys"** - mini server for testing player apps that can play encrypted streams
 
