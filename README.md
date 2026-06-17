@@ -58,6 +58,9 @@ todo:
 
 **ver**
 
+2026-06-17-1
+https://github.com/glitport/AuthoIPTV/ can actually play ecnrypted channels on pc! Well done!
+
 2026-03-28-1
 - working on improving android tv ui.
 
