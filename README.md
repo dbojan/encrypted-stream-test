@@ -97,7 +97,7 @@ https://github.com/AndreyPavlenko/Fermata/issues/686
 
 PC
 
-**https://github.com/4gray/iptvnator/issues/656**  -- implemented, currently does not work for me
+**https://github.com/4gray/iptvnator/issues/656**  -- implemented, currently does not work for me in 0.22.0 (will be implemented in 0.23.0)
 
 https://code.videolan.org/videolan/vlc/-/issues/29465
 
