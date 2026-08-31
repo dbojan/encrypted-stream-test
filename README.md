@@ -73,7 +73,7 @@ todo:
 **news**
 
 2026-06-17-1
-**https://github.com/glitport/AuthoIPTV/ can actually play encrypted channels on pc! Well done!**
+**https://github.com/glitport/AuthoIPTV/ can actually play encrypted channels on pc! Well done!** (note this app is freeware, source code is not available)
 
 <br>
 <br>
