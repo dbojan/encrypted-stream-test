@@ -1,4 +1,3 @@
-<hr>
 
 # Esplayer android - open source encrypted stream player for android
 **Android**
@@ -64,7 +63,14 @@ todo:
 2026-03-17-1
 - first version
 
----
+<hr>
+
+# Esplayer desktop - open source encrypted stream player for desktop, linux appimage available, will be soon for windows too.
+
+[appimage x64 on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
+
+
+<hr>
 # Other players available
 
 2026-06-17-1
