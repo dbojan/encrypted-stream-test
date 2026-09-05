@@ -78,9 +78,9 @@ todo:
 - supported: epg, subtitles (pluto).
 - put esplayer.txt with links to .m3u/.m3u8, or their gzipped version next to appimage, and start app
 
--you can use appimage on linuxm or compile/run from source:
+- you can use appimage on linuxm or compile/run from source:
 
--to install from source:
+- to install from source:
 install nodejs, then:
 ```
 npm install
