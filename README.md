@@ -1,11 +1,6 @@
-# es player - open source encrypted stream player for android
+<hr>
 
-#version: 2026-03-28-1
-
-binary files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
-
-https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sharing
-
+# Esplayer android - open source encrypted stream player for android
 **Android**
 
 **ES player** - open source clearkey encrypted dash stream player for android 
@@ -70,20 +65,14 @@ todo:
 - first version
 
 ---
-**news**
+# Other players available
 
 2026-06-17-1
 **https://github.com/glitport/AuthoIPTV/ can actually play encrypted channels on pc! Well done!** (note this app is freeware, source code is not available)
 
 <br>
-<br>
 
-
-**"encryptionstream_test_server_single_and_multi_keys"** - mini server for testing player apps that can play encrypted streams
-
-#version: 2026-03-21-1
-
-issues posted:
+issues posted about adding clearkey support to other players:
 
 ANDROID:
 
@@ -114,8 +103,21 @@ sparkle tv sometimes (closed source, max 3 hours update, current choice)
 
 no desktop pc app (maybe Kodi).
 
+<hr>
 
-**ver**
+# Encrypted streams files to test if your own app can decrypt clearkey videos:
+
+#version: 2026-03-28-1
+
+binary files are on google drive, because I cannot upload file through browser, if it is bigger than 25MB:
+
+[files to test](https://drive.google.com/drive/folders/171E1WYpe6Zb2JOSm_ZnVV77P7e6InS6w?usp=sharing)
+
+<hr>
+
+## changes, history, etc
+
+### encrypted streams history
 
 2026-03-21-1  
 - added tests for user agent and referrer
