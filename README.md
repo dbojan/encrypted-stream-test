@@ -67,6 +67,8 @@ todo:
 
 # Esplayer desktop - open source encrypted stream player for desktop, linux appimage available, will be soon for windows too.
 
+2026-09-05-14-50-52
+
 [appimage x64 on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
 
 - uses electron (unfortunately) + shaka player
@@ -74,6 +76,7 @@ todo:
 - use scroll wheel or key up/down, page up/down to switch channels
 - supported clearkey, widevine
 - supported: epg, subtitles (pluto).
+- source code is in esplayer_desktop folder, here in github page.
 
 -you can use appimage on linuxm or compile/run from source:
 
