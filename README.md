@@ -72,11 +72,11 @@ todo:
 [appimage x64 on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
 
 - uses electron (unfortunately) + shaka player
-- put esplayer.txt with links to .m3u/.m3u8, or their gzipped version next to appimage, and start app
+- source code is in esplayer_desktop folder, here in github page.
 - use scroll wheel or key up/down, page up/down to switch channels
 - supported clearkey, widevine
 - supported: epg, subtitles (pluto).
-- source code is in esplayer_desktop folder, here in github page.
+- put esplayer.txt with links to .m3u/.m3u8, or their gzipped version next to appimage, and start app
 
 -you can use appimage on linuxm or compile/run from source:
 
