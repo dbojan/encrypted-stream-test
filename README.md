@@ -1,15 +1,12 @@
 
 # Esplayer android - open source encrypted stream player for android
-**Android**
 
-**ES player** - open source clearkey encrypted dash stream player for android 
+2026-09-07-08-42-53
 
-Download es_player.apk to install on android
+Download apk from esplayer_android folder to install on android
 
 - supports clearkey 1 and multiple keys encrypted dash streams
-- written in flutter, uses mediakit
-- beta version
-- does not support widevine
+- written in kotlin multiplatform + exoplayer
 
 **how to use**
 
@@ -19,38 +16,40 @@ Download es_player.apk to install on android
 - left on remote/swipe from left to right: show channel list
 - right on remote/swipe from right to left: show settings
 
-on the settings screen:
-- swipe right - go back to play screen
-- pull down - update currently selected list
+- you can put URLS to your playlist in Documents/esplayer.txt, so you do not have to type them in manually: 
 
--you can put URLS to your playlist in Documents/esplayer.txt, so you do not have to type them in manually: 
 Documents/esplayer.txt content: 
+```
 http://mysite1.com/list1.m3u  
 http://mysite2.com/list2.m3u  
+```
 
-
--you can search playlist, and save the result to new playlist
-
-
--you can put local playlists files in Documents folder, and esplayer will add them. 
+- you can search playlist, and save the result to new playlist
+- you can put local playlists files in Documents folder, and esplayer will add them. 
 (this is also used for saving search to new playlist)  
 
-local_playlist_example.m3u:  
+local_playlist_example.m3u:
+```
 #EXTM3U
 #EXTINF:-1,stream 1
 http://website.com/list.m3u
 #EXTINF:-1,stream 2
 http://website2/list.m3u
+```
+- you can add playlist(s): http://www.something.../play.m3u from settings screen
 
--you can add playlist(s): http://www.something.../play.m3u from settings screen
+- from the channellist you can switch playlists or update them
+- added support for subtitles, more settings.
 
--from the channellist you can switch playlists or update them
--added support for subtitles, more settings.
+- when you tap on screen bookmark is added, (letter m or M (New) in bottom left). to go to bookmark tap on that letter
 
-todo:
-- make version for pc, using flutter + webkit + shaka
+- sftp, http lists are also supported
+- list.xml(.gz) near list.m3u(.gz) also supported (local xml), for epg, just make sure they are accessible, like on local web server
 
 **ver**
+
+2026-09-07-08-42-53
+fixes and new features
 
 2026-03-28-1
 - working on improving android tv ui.
@@ -67,18 +66,19 @@ todo:
 
 # Esplayer desktop - open source encrypted stream player for desktop, linux appimage available, will be soon for windows too.
 
-2026-09-05-14-50-52
+2026-09-07-08-42-53
 
 [appimage x64 on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
 
 - uses electron (unfortunately) + shaka player
 - source code is in esplayer_desktop folder, here in github page.
 - use scroll wheel or key up/down, page up/down to switch channels
-- supported clearkey, widevine
+- supported clearkey, widevine (although if channels require l1 hardware level, probably wont work)
 - supported: epg, subtitles (pluto).
 - put esplayer.txt with links to .m3u/.m3u8, or their gzipped version next to appimage, and start app
+- or drag and drop m3u/m3u/gzipped version on app.
 
-- you can use appimage on linuxm or compile/run from source:
+- you can use appimage on linux or compile/run from source:
 
 - to install from source:
 install nodejs, then:
@@ -86,6 +86,12 @@ install nodejs, then:
 npm install
 npm start
 ```
+
+to create appimage yourself (delete dist folder first):
+```
+npm run dist:linux
+```
+
   
 
 <hr>
