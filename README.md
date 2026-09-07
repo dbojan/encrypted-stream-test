@@ -1,5 +1,5 @@
 
-# Esplayer android - open source encrypted stream player for android
+# Esplayer android - open source IPTV player with support for encrypted streams
 
 2026-09-07-08-42-53
 
@@ -64,7 +64,7 @@ fixes and new features
 
 <hr>
 
-# Esplayer desktop - open source encrypted stream player for desktop, linux appimage available, will be soon for windows too.
+# Esplayer desktop - open source IPTV player with support for encrypted streams
 
 2026-09-07-08-42-53
 
