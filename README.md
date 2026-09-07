@@ -68,7 +68,7 @@ fixes and new features
 
 2026-09-07-08-42-53
 
-[appimage x64 on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
+[windows and linux programs on google drive](https://drive.google.com/drive/folders/1g1VQJJlJ9GU8jronRg7ZgBzxREPsxAU-?usp=sharing)
 
 - uses electron (unfortunately) + shaka player
 - source code is in esplayer_desktop folder, here in github page.
@@ -76,7 +76,8 @@ fixes and new features
 - supported clearkey, widevine (although if channels require l1 hardware level, probably wont work)
 - supported: epg, subtitles (pluto).
 - put esplayer.txt with links to .m3u/.m3u8, or their gzipped version next to appimage, and start app
-- or drag and drop m3u/m3u/gzipped version on app.
+- if you use windows 'setup version' copy esplayer.txt or m3u lists to installed .exe file location, probably something like `C:\Users\<username>\AppData\Local\Programs\esplayerdesktop` folder
+- you can also drag and drop m3u/m3u/gzipped version on the app window.
 
 - you can use appimage on linux or compile/run from source:
 
